@@ -1,0 +1,593 @@
+/* Oak & Lily Storefront Replica Stylesheet */
+
+/* 1. Global Reset & Brand Typography */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* 2. Banner & Slider Links */
+.banner-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.slick-slider a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 3. Product Cards & Collections */
+.card__heading a {
+  color: inherit;
+  text-decoration: none;
+}
+.card-wrapper.underline-links-hover:hover .card__heading a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.product__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 4. Judgeme Star Font & Review Testimonials */
+@font-face {
+  font-family: 'JudgemeStar';
+  src: url("data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAScAA0AAAAABrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAEgAAAABoAAAAcbyQ+3kdERUYAAARgAAAAHgAAACAAMwAGT1MvMgAAAZgAAABGAAAAVi+vS9xjbWFwAAAB8AAAAEAAAAFKwBMjvmdhc3AAAARYAAAACAAAAAj//wADZ2x5ZgAAAkAAAAEJAAABdH33LXtoZWFkAAABMAAAAC0AAAA2BroQKWhoZWEAAAFgAAAAHAAAACQD5QHQaG10eAAAAeAAAAAPAAAAFAYAAABsb2NhAAACMAAAAA4AAAAOAO4AeG1heHAAAAF8AAAAHAAAACAASgAvbmFtZQAAA0wAAADeAAABkorWfVZwb3N0AAAELAAAACkAAABEp3ubLXgBY2BkYADhPPP4OfH8Nl8ZuJkYQODS2fRrCPr/aSYGxq1ALgcDWBoAO60LkwAAAHgBY2BkYGDc+v80gx4TAwgASaAICmABAFB+Arl4AWNgZGBgYGPQYWBiAAIwyQgWc2AAAwAHVQB6eAFjYGRiYJzAwMrAwejDmMbAwOAOpb8ySDK0MDAwMbByMsCBAAMCBKS5pjA4PGB4wMR44P8BBj3GrQymQGFGkBwAjtgK/gAAeAFjYoAAEA1jAwAAZAAHAHgB3crBCcAwDEPRZydkih567CDdf4ZskmLwFBV8xBfCaC4BXkOUmx4sU0h2ngNb9V0vQCxaRKIAevT7fGWuBrEAAAAAAAAAAAA0AHgAugAAeAF9z79Kw1AUx/FzTm7un6QmJtwmQ5Bg1abgEGr/BAqlU6Gju+Cgg1MkQ/sA7Vj7BOnmO/gUvo2Lo14NqIO6/IazfD8HEODtmQCfoANwNsyp2/GJt3WKQrd1NLiYYWx2PBqOsmJMEOznPOTzfSCrhAtbbLdmeFLJV9eKd63WLrZcIcuaEVdssWCKM6pLCfTVOYbz/0pNSMSZKLIZpvh78sAUH6PlMrreTCabP9r+Z/puPZ2ur/RqpQHgh+MIegCnXeM4MRAPjYN//5tj4ZtTjkFqEdmeMShlEJ7tVAly2TAkx6R68Fl4E/aVvn8JqHFQ4JS1434gXKcuL31dDhzs3YbsEOAd/IU88gAAAHgBfY4xTgMxEEVfkk0AgRCioKFxQYd2ZRtpixxgRU2RfhU5q5VWseQ4JdfgAJyBlmNwAM7ABRhZQ0ORwp7nr+eZAa54YwYg9zm3ynPOeFRe8MCrciXOh/KSS76UV5L/iDmrLiS5AeU519wrL3jmSbkS5115yR2fyivJv9kx0ZMZ2RLZw27q87iNQi8EBo5FSPIMw3HqBboi5lKTGAGDp8FKXWP+t9TU01Lj5His1Ba6uM9dTEMwvrFmbf5GC/q2drW3ruXUhhsCiQOjznFlCzYhHUZp4xp76vsvQh89CQAAeAFjYGJABowM6IANLMrEyMTIzMjCXpyRWJBqZshWXJJYBKOMAFHFBucAAAAAAAAB//8AAngBY2BkYGDgA2IJBhBgAvKZGViBJAuYxwAABJsAOgAAeAFjYGBgZACCk535hiD60tn0azAaAEqpB6wAAA==") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+.jdgm-star {
+  font-family: 'JudgemeStar' !important;
+  color: #e7be27 !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  line-height: 1;
+}
+.jdgm-star.jdgm--on:before {
+  content: "\e000" !important;
+}
+.jdgm-star.jdgm--off:before {
+  content: "\e001" !important;
+}
+.jdgm-star.jdgm--half:before {
+  content: "\e002" !important;
+}
+.jdgm-rating-star {
+  color: #e7be27 !important;
+}
+.jdgm-product-name a {
+  color: #103f5a !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+.jdgm-product-name a:hover {
+  text-decoration: underline !important;
+  opacity: 0.85;
+}
+
+/* 5. Product Page "Buy it now" Button */
+.shopify-payment-button {
+  margin-top: 0;
+  width: 100%;
+}
+.shopify-payment-button__button--unbranded {
+  background-color: #103f5a !important;
+  color: #ffffff !important;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  border-radius: 0;
+  min-height: 4.6rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+.shopify-payment-button__button--unbranded:hover {
+  opacity: 0.9;
+  background-color: #0c3147 !important;
+}
+
+/* 6. Related Products & Search Results Grid */
+.related-products__heading {
+  margin-bottom: 2.5rem;
+}
+.template-search__results {
+  margin-top: 3rem;
+}
+.template-search__results .product-grid {
+  margin-top: 2rem;
+}
+
+/* 7. Mobile Header Alignment */
+@media (max-width: 749px) {
+  header.header {
+    min-height: 70.640625px;
+    padding-top: 13.8203125px;
+    padding-bottom: 13.8203125px;
+  }
+}
+
+/* 8. SVG Icon Constraints */
+.modal__close-button svg,
+.drawer__close svg,
+.search__button svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  max-width: 1.8rem;
+  max-height: 1.8rem;
+}
+
+/* Header Action Icons */
+.header__icon .icon-search {
+  width: 2rem !important;
+  height: 2rem !important;
+  max-width: 2rem !important;
+  max-height: 2rem !important;
+}
+
+.header__icon--account {
+  width: 2.3rem !important;
+  height: 4.4rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  color: rgb(16, 63, 90) !important;
+}
+
+.header__icon--account svg#svgkp,
+.header--icon svg#svgkp {
+  width: 2.3rem !important;
+  height: 2.3rem !important;
+  max-width: 2.3rem !important;
+  max-height: 2.3rem !important;
+  display: block !important;
+}
+
+.header__icon--cart .icon-cart-empty {
+  width: 4.4rem !important;
+  height: 4.4rem !important;
+  max-width: 4.4rem !important;
+  max-height: 4.4rem !important;
+  display: block !important;
+}
+
+
+/* 9. Blog Typography & Article Layout */
+.article-template__content {
+  line-height: 1.8;
+  font-size: 1.6rem;
+  color: rgba(var(--color-foreground), 0.85);
+}
+.article-template__content p {
+  margin-bottom: 1.5rem;
+}
+.article-card__heading a {
+  color: inherit;
+  text-decoration: none;
+}
+.article-card__heading a:hover {
+  text-decoration: underline;
+}
+
+/* 10. Account Login/Signup Modal (Scoped) */
+.oak-login-modal-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  font-family: Inter, Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+.oak-login-modal-overlay * {
+  box-sizing: border-box;
+}
+
+.oak-login-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.oak-login-modal-overlay .oak-login-modal {
+  position: relative;
+  width: 760px;
+  max-width: calc(100vw - 32px);
+  min-height: 346px;
+  background-color: #f8f4ef;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  overflow: hidden;
+  transform: scale(0.96);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.oak-login-modal-overlay.active .oak-login-modal {
+  transform: scale(1);
+}
+
+.oak-login-modal-overlay .oak-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #eaecf0;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 10;
+  color: #101828;
+  transition: background-color 0.15s ease;
+}
+
+.oak-login-modal-overlay .oak-modal-close:hover {
+  background-color: #d0d5dd;
+}
+
+.oak-login-modal-overlay .oak-modal-close svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+/* Left Section: Branding & Review */
+.oak-login-modal-overlay .oak-modal-left {
+  width: 47%;
+  padding: 24px 28px 18px;
+  background-color: #f8f4ef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.oak-login-modal-overlay .oak-modal-logo-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+}
+
+.oak-login-modal-overlay .oak-modal-logo {
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.oak-login-modal-overlay .oak-modal-left-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oak-login-modal-overlay .oak-modal-tagline {
+  margin: 10px 0 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.oak-login-modal-overlay .oak-modal-card {
+  width: 100%;
+  max-width: 320px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.oak-login-modal-overlay .oak-modal-card-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.oak-login-modal-overlay .oak-modal-card-icon img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.oak-login-modal-overlay .oak-modal-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.oak-login-modal-overlay .oak-modal-card-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.oak-login-modal-overlay .oak-modal-card-desc {
+  margin: 3px 0 0;
+  font-size: 11px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.2;
+}
+
+.oak-login-modal-overlay .oak-modal-dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.oak-login-modal-overlay .oak-modal-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+.oak-login-modal-overlay .oak-modal-dot.active {
+  background-color: #ffffff;
+}
+
+/* Right Section: Form */
+.oak-login-modal-overlay .oak-modal-right {
+  width: 53%;
+  padding: 32px 36px 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.oak-login-modal-overlay .oak-modal-title {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 700;
+  color: #00192F;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.oak-login-modal-overlay .oak-modal-subtitle {
+  display: block;
+  font-size: 21px;
+  font-weight: 700;
+  color: #00192F;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.oak-login-modal-overlay .oak-modal-input-group {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.oak-login-modal-overlay .oak-modal-dial-code {
+  width: 48px;
+  height: 42px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #4b5563;
+  flex-shrink: 0;
+}
+
+.oak-login-modal-overlay .oak-modal-input-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.oak-login-modal-overlay .oak-modal-phone-input {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #101828;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.15s ease;
+}
+
+.oak-login-modal-overlay .oak-modal-phone-input::placeholder {
+  color: #98a2b3;
+  font-weight: 400;
+}
+
+.oak-login-modal-overlay .oak-modal-phone-input:focus {
+  border-color: #0e1b4d;
+}
+
+.oak-login-modal-overlay .oak-modal-submit-btn {
+  width: 100%;
+  height: 40px;
+  background-color: #616567;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  font-family: inherit;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.oak-login-modal-overlay .oak-modal-submit-btn:hover {
+  background-color: #4b4f51;
+}
+
+.oak-login-modal-overlay .oak-modal-marketing-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 12px;
+  color: #98a2b3;
+  margin-bottom: 16px;
+}
+
+.oak-login-modal-overlay .oak-modal-checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.oak-login-modal-overlay .oak-modal-checkbox {
+  width: 14px;
+  height: 14px;
+  accent-color: #616567;
+  cursor: pointer;
+  margin: 0;
+}
+
+.oak-login-modal-overlay .oak-modal-checkbox-label {
+  font-size: 12px;
+  color: #98a2b3;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+}
+
+.oak-login-modal-overlay .oak-modal-read-details {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #98a2b3;
+  text-decoration: underline;
+  font-size: 12px;
+  cursor: pointer;
+  line-height: 1;
+  font-family: inherit;
+}
+
+.oak-login-modal-overlay .oak-modal-read-details:hover {
+  color: #667085;
+}
+
+.oak-login-modal-overlay .oak-modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+  padding-top: 4px;
+}
+
+.oak-login-modal-overlay .oak-modal-powered-by {
+  font-size: 11px;
+  color: #98a2b3;
+  margin: 0 6px 0 0;
+}
+
+.oak-login-modal-overlay .oak-modal-powered-img {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .oak-login-modal-overlay .oak-login-modal {
+    width: 90vw;
+    max-width: 360px;
+    flex-direction: column;
+    min-height: auto;
+    border-radius: 16px;
+  }
+
+  .oak-login-modal-overlay .oak-modal-left {
+    width: 100%;
+    padding: 24px 20px 16px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .oak-login-modal-overlay .oak-modal-logo {
+    max-width: 150px;
+  }
+
+  .oak-login-modal-overlay .oak-modal-tagline {
+    font-size: 13px;
+    margin: 8px 0 10px;
+  }
+
+  .oak-login-modal-overlay .oak-modal-card {
+    max-width: 100%;
+    padding: 8px 12px;
+  }
+
+  .oak-login-modal-overlay .oak-modal-right {
+    width: 100%;
+    padding: 20px 20px 16px;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .oak-login-modal-overlay .oak-modal-title {
+    font-size: 18px;
+  }
+
+  .oak-login-modal-overlay .oak-modal-subtitle {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+}

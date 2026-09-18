@@ -1,0 +1,143 @@
+{
+  "home-desktop": {
+    "local404s": [],
+    "consoleErrors": [],
+    "inspection": {
+      "brokenImagesCount": 0,
+      "brokenImages": [],
+      "blueLinksCount": 0,
+      "blueLinks": [],
+      "oversizedSvgsCount": 0,
+      "oversizedSvgs": [],
+      "bodyFont": "Montserrat, sans-serif",
+      "h1Font": "Montserrat, sans-serif",
+      "h2Font": "Montserrat, sans-serif"
+    }
+  },
+  "home-mobile": {
+    "local404s": [],
+    "consoleErrors": [],
+    "inspection": {
+      "brokenImagesCount": 0,
+      "brokenImages": [],
+      "blueLinksCount": 0,
+      "blueLinks": [],
+      "oversizedSvgsCount": 0,
+      "oversizedSvgs": [],
+      "bodyFont": "Montserrat, sans-serif",
+      "h1Font": "Montserrat, sans-serif",
+      "h2Font": "Montserrat, sans-serif"
+    }
+  },
+  "collection": {
+    "local404s": [],
+    "consoleErrors": [],
+    "inspection": {
+      "brokenImagesCount": 0,
+      "brokenImages": [],
+      "blueLinksCount": 0,
+      "blueLinks": [],
+      "oversizedSvgsCount": 0,
+      "oversizedSvgs": [],
+      "bodyFont": "Montserrat, sans-serif",
+      "h1Font": "Montserrat, sans-serif",
+      "h2Font": "Montserrat, sans-serif"
+    }
+  },
+  "product": {
+    "local404s": [],
+    "consoleErrors": [],
+    "inspection": {
+      "brokenImagesCount": 1,
+      "brokenImages": [
+        {
+          "src": "http://localhost:5173/assets/f1fb1dfda8524db3.jpg",
+          "alt": "Peach Print Kitchen Napkins | Set of 3",
+          "outer": "<img class=\"global-media-settings global-media-settings--no-shadow\" sizes=\"(min-width: 750px) calc(100vw - 22rem), 1100px\" src=\"/assets/f1fb1dfda8524d"
+        }
+      ],
+      "blueLinksCount": 0,
+      "blueLinks": [],
+      "oversizedSvgsCount": 0,
+      "oversizedSvgs": [],
+      "bodyFont": "Montserrat, sans-serif",
+      "h1Font": "Montserrat, sans-serif",
+      "h2Font": "Montserrat, sans-serif"
+    }
+  },
+  "story": {
+    "local404s": [],
+    "consoleErrors": [],
+    "inspection": {
+      "brokenImagesCount": 0,
+      "brokenImages": [],
+      "blueLinksCount": 0,
+      "blueLinks": [],
+      "oversizedSvgsCount": 0,
+      "oversizedSvgs": [],
+      "bodyFont": "Montserrat, sans-serif",
+      "h1Font": null,
+      "h2Font": "Montserrat, sans-serif"
+    }
+  },
+  "blog-index": {
+    "local404s": [],
+    "consoleErrors": [],
+    "inspection": {
+      "brokenImagesCount": 0,
+      "brokenImages": [],
+      "blueLinksCount": 0,
+      "blueLinks": [],
+      "oversizedSvgsCount": 0,
+      "oversizedSvgs": [],
+      "bodyFont": "Montserrat, sans-serif",
+      "h1Font": "Montserrat, sans-serif",
+      "h2Font": "Montserrat, sans-serif"
+    }
+  },
+  "blog-article": {
+    "local404s": [],
+    "consoleErrors": [],
+    "inspection": {
+      "brokenImagesCount": 0,
+      "brokenImages": [],
+      "blueLinksCount": 0,
+      "blueLinks": [],
+      "oversizedSvgsCount": 0,
+      "oversizedSvgs": [],
+      "bodyFont": "Montserrat, sans-serif",
+      "h1Font": "Montserrat, sans-serif",
+      "h2Font": "Montserrat, sans-serif"
+    }
+  },
+  "search": {
+    "local404s": [],
+    "consoleErrors": [],
+    "inspection": {
+      "brokenImagesCount": 0,
+      "brokenImages": [],
+      "blueLinksCount": 0,
+      "blueLinks": [],
+      "oversizedSvgsCount": 0,
+      "oversizedSvgs": [],
+      "bodyFont": "Montserrat, sans-serif",
+      "h1Font": "Montserrat, sans-serif",
+      "h2Font": "Montserrat, sans-serif"
+    }
+  },
+  "policies": {
+    "local404s": [],
+    "consoleErrors": [],
+    "inspection": {
+      "brokenImagesCount": 0,
+      "brokenImages": [],
+      "blueLinksCount": 0,
+      "blueLinks": [],
+      "oversizedSvgsCount": 0,
+      "oversizedSvgs": [],
+      "bodyFont": "Montserrat, sans-serif",
+      "h1Font": "Montserrat, sans-serif",
+      "h2Font": "Montserrat, sans-serif"
+    }
+  }
+}

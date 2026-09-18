@@ -1,0 +1,116 @@
+[
+  {
+    "width": 390,
+    "heroComparison": {
+      "width": 390,
+      "height": 391,
+      "changedChannels": 1170,
+      "meanDifference": 0.00639386189258312,
+      "sameSize": true
+    },
+    "headerHeight": 92.265625,
+    "accountModal": true,
+    "styles": {
+      ".announcement-bar": {
+        "font": "Montserrat, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "width": "330px",
+        "height": "46px"
+      },
+      "header.header": {
+        "font": "Montserrat, sans-serif",
+        "color": "rgba(16, 63, 90, 0.75)",
+        "width": "390px",
+        "height": "92.2656px"
+      },
+      ".header__menu-item": {
+        "font": "Montserrat, sans-serif",
+        "color": "rgba(16, 63, 90, 0.75)",
+        "width": "auto",
+        "height": "auto"
+      },
+      ".icon-search": {
+        "font": "Montserrat, sans-serif",
+        "color": "rgb(16, 63, 90)",
+        "width": "20px",
+        "height": "20px"
+      }
+    }
+  },
+  {
+    "width": 768,
+    "heroComparison": {
+      "width": 768,
+      "height": 258,
+      "changedChannels": 2304,
+      "meanDifference": 0.009689922480620155,
+      "sameSize": true
+    },
+    "headerHeight": 73,
+    "accountModal": true,
+    "styles": {
+      ".announcement-bar": {
+        "font": "Montserrat, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "width": "704px",
+        "height": "44px"
+      },
+      "header.header": {
+        "font": "Montserrat, sans-serif",
+        "color": "rgba(16, 63, 90, 0.75)",
+        "width": "768px",
+        "height": "73px"
+      },
+      ".header__menu-item": {
+        "font": "Montserrat, sans-serif",
+        "color": "rgba(16, 63, 90, 0.75)",
+        "width": "auto",
+        "height": "auto"
+      },
+      ".icon-search": {
+        "font": "Montserrat, sans-serif",
+        "color": "rgb(16, 63, 90)",
+        "width": "20px",
+        "height": "20px"
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "heroComparison": {
+      "width": 1440,
+      "height": 484,
+      "changedChannels": 4320,
+      "meanDifference": 0.005165289256198347,
+      "sameSize": true
+    },
+    "headerHeight": 96.375,
+    "accountModal": true,
+    "styles": {
+      ".announcement-bar": {
+        "font": "Montserrat, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "width": "1100px",
+        "height": "39.5px"
+      },
+      "header.header": {
+        "font": "Montserrat, sans-serif",
+        "color": "rgba(16, 63, 90, 0.75)",
+        "width": "1200px",
+        "height": "96.375px"
+      },
+      ".header__menu-item": {
+        "font": "Montserrat, sans-serif",
+        "color": "rgba(16, 63, 90, 0.75)",
+        "width": "71.4062px",
+        "height": "42.1875px"
+      },
+      ".icon-search": {
+        "font": "Montserrat, sans-serif",
+        "color": "rgb(16, 63, 90)",
+        "width": "20px",
+        "height": "20px"
+      }
+    }
+  }
+]

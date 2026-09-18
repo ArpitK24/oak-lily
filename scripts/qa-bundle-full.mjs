@@ -1,0 +1,63 @@
+import {chromium} from 'playwright';
+import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const browser=await chromium.launch({args:['--no-sandbox']});
+const reports=[];
+const cents=text=>Math.round(Number(text.replace(/[^0-9.]/g,''))*100);
+for(const width of [390,768,1440]){
+ const context=await browser.newContext({viewport:{width,height:1000}});
+ await context.route(/^https?:\/\/(?!localhost)/,r=>r.abort());
+ const page=await context.newPage();const errors=[],failed=[],css=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ page.on('response',r=>{if(r.url().includes('.css'))css.push({url:r.url(),status:r.status()});if(r.status()>=400)failed.push({url:r.url(),status:r.status()});});
+ await page.goto('http://localhost:5173/',{waitUntil:'domcontentloaded'});
+ await page.waitForTimeout(300);
+ if(width<990){await page.locator('header-drawer summary').first().click();await page.locator('#HeaderDrawer-gifts-bundle').click();}
+ else await page.locator('#HeaderMenu-gifts-bundle').click();
+ await page.waitForURL('**/bundle');
+ await page.goto('http://localhost:5173/',{waitUntil:'domcontentloaded'});
+ await page.locator('.oak-bundle-banner .button').click();await page.waitForURL('**/bundle');
+ await page.waitForTimeout(300);
+ const card=page.locator('[data-product="peach-pink-kitchen-napkins"]');
+ const variants=await card.locator('script').evaluate(e=>JSON.parse(e.textContent).variants);
+ assert.ok(variants.length>=2);
+ await card.locator('select').selectOption(String(variants[1].id));
+ assert.equal(cents(await card.locator('[data-price]').innerText()),variants[1].price);
+ await card.locator('[data-add]').click();
+ assert.equal(cents(await page.locator('[data-subtotal]').innerText()),variants[1].price);
+ assert.equal(cents(await page.locator('[data-discount]').innerText()),0);
+ await card.locator('select').selectOption(String(variants[0].id));await card.locator('[data-add]').click();
+ const subtotal=variants[1].price+variants[0].price;
+ const discount=Math.round(variants[1].price*.1)+Math.round(variants[0].price*.1);
+ assert.match(await page.locator('[data-tier]').innerText(),/10% OFF/);
+ assert.equal(cents(await page.locator('[data-subtotal]').innerText()),subtotal);
+ assert.equal(cents(await page.locator('[data-discount]').innerText()),discount);
+ assert.equal(cents(await page.locator('[data-total]').innerText()),subtotal-discount);
+ await page.locator('[data-plus]').first().click();assert.match(await page.locator('[data-tier]').innerText(),/15% OFF/);
+ await page.locator('[data-plus]').first().click();assert.match(await page.locator('[data-tier]').innerText(),/15% OFF/);
+ await page.locator('[data-minus]').first().click();await page.locator('[data-minus]').first().click();assert.match(await page.locator('[data-tier]').innerText(),/10% OFF/);
+ await page.reload({waitUntil:'domcontentloaded'});await page.waitForTimeout(250);assert.match(await page.locator('[data-tier]').innerText(),/10% OFF/);
+ // Sold-out selections cannot be added; category filtering uses captured memberships.
+ const unavailable=page.locator('[data-add]:disabled');assert.ok(await unavailable.count()>0);
+ await page.locator('[data-filter]').selectOption('table-linens');assert.ok(await page.locator('[data-product]:visible').count()>0);assert.ok(await page.locator('[data-product][hidden]').count()>0);await page.locator('[data-filter]').selectOption('');
+ await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:`qa/bundle-top-${width}.png`});
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await page.locator('[data-checkout]').click();await page.waitForTimeout(300);
+ assert.ok(await page.locator('cart-drawer').evaluate(e=>e.classList.contains('active')));
+ assert.equal(await page.locator('cart-drawer [data-cart-index]').count(),2);
+ let cart=await page.evaluate(()=>fetch('/cart.js').then(r=>r.json()));assert.equal(cart.total_price,subtotal-discount);assert.equal(cart.total_discount,discount);
+ await page.locator('cart-drawer [data-quantity][data-delta="1"]').first().click();
+ cart=await page.evaluate(()=>fetch('/cart.js').then(r=>r.json()));assert.equal(cart.item_count,3);assert.equal(cart.total_discount,cart.items.reduce((sum,x)=>sum+Math.round(x.price*x.quantity*.15),0));
+ await page.locator('cart-drawer [data-quantity][data-delta="1"]').first().click();cart=await page.evaluate(()=>fetch('/cart.js').then(r=>r.json()));assert.equal(cart.item_count,4);assert.equal(cart.total_discount,cart.items.reduce((sum,x)=>sum+Math.round(x.price*x.quantity*.15),0));
+ await page.screenshot({path:`qa/bundle-cart-${width}.png`});
+ await page.locator('cart-drawer .drawer__close').click();
+ // Normal purchase of an identical variant remains its own full-price line.
+ await page.goto('http://localhost:5173/products/peach-pink-kitchen-napkins',{waitUntil:'domcontentloaded'});await page.waitForTimeout(250);await page.locator('product-form button[type="submit"]').first().click();await page.waitForTimeout(250);
+ cart=await page.evaluate(()=>fetch('/cart.js').then(r=>r.json()));assert.equal(cart.items.length,3);assert.equal(cart.items.filter(x=>!x.bundleId).length,1);assert.equal(cart.total_discount,cart.items.filter(x=>x.bundleId).reduce((sum,x)=>sum+Math.round(x.price*x.quantity*.15),0));
+ await page.locator('cart-drawer [data-remove]').first().click();cart=await page.evaluate(()=>fetch('/cart.js').then(r=>r.json()));assert.equal(cart.total_discount,0);
+ await page.reload({waitUntil:'domcontentloaded'});await page.waitForTimeout(250);cart=await page.evaluate(()=>fetch('/cart.js').then(r=>r.json()));assert.equal(cart.items.length,2);assert.equal(cart.total_discount,0);
+ assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);
+ reports.push({width,passed:true,products:110,errors,failed,css,checks:['header entry','banner entry','variants and exact prices','1/2/3/4 units','10% and 15% exact totals','quantity decrease','draft refresh','unavailable products','category filters','cart addition','cart quantities 3 and 4','normal purchase same variant','cart removal recalculates','cart persistence','no horizontal overflow']});
+ await context.close();
+}
+await fs.writeFile('qa/bundle-full-results.json',JSON.stringify(reports,null,2));await browser.close();console.log('PASS: all bundle and cart checks at 390, 768, 1440; no page errors or HTTP failures.');

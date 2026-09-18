@@ -1,0 +1,14 @@
+{
+  "passed": [
+    "predictive search",
+    "product navigation",
+    "variant selection",
+    "add to cart",
+    "quantity change",
+    "cart persistence",
+    "remove item",
+    "search results",
+    "mobile submenu navigation"
+  ],
+  "errors": []
+}

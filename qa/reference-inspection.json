@@ -1,0 +1,204 @@
+{
+  "title": "OAK AND LILY",
+  "sections": [
+    {
+      "id": "shopify-section-template--22903329161502__banner_FnAgaL",
+      "box": {
+        "x": 0,
+        "y": 140.875,
+        "width": 1440,
+        "height": 482.28125,
+        "top": 140.875,
+        "right": 1440,
+        "bottom": 623.15625,
+        "left": 0
+      },
+      "text": ""
+    },
+    {
+      "id": "shopify-section-template--22903329161502__shoppable_video_CeryX8",
+      "box": {
+        "x": 0,
+        "y": 623.15625,
+        "width": 1440,
+        "height": 440.40625,
+        "top": 623.15625,
+        "right": 1440,
+        "bottom": 1063.5625,
+        "left": 0
+      },
+      "text": "Oak & Lily Green Leaves Cotton Cushion Cover | 100% Pure Cotton | Soft, Durable & Washable | Europea"
+    },
+    {
+      "id": "shopify-section-template--22903329161502__rich_text_tYD8fr",
+      "box": {
+        "x": 0,
+        "y": 1063.5625,
+        "width": 1440,
+        "height": 43.1875,
+        "top": 1063.5625,
+        "right": 1440,
+        "bottom": 1106.75,
+        "left": 0
+      },
+      "text": "SHOP BY CATEGORY"
+    },
+    {
+      "id": "shopify-section-template--22903329161502__category_dJQPfp",
+      "box": {
+        "x": 0,
+        "y": 1106.75,
+        "width": 1440,
+        "height": 286.390625,
+        "top": 1106.75,
+        "right": 1440,
+        "bottom": 1393.140625,
+        "left": 0
+      },
+      "text": "Kitchen Napkins\nCushion Covers\nTable Runners\nAprons\nBed Linen\nTable Combos"
+    },
+    {
+      "id": "shopify-section-template--22903329161502__banner_cVqQAb",
+      "box": {
+        "x": 0,
+        "y": 1393.140625,
+        "width": 1440,
+        "height": 171.75,
+        "top": 1393.140625,
+        "right": 1440,
+        "bottom": 1564.890625,
+        "left": 0
+      },
+      "text": ""
+    },
+    {
+      "id": "shopify-section-template--22903329161502__custom_liquid_Nf7YmH",
+      "box": {
+        "x": 0,
+        "y": 1564.890625,
+        "width": 1440,
+        "height": 592,
+        "top": 1564.890625,
+        "right": 1440,
+        "bottom": 2156.890625,
+        "left": 0
+      },
+      "text": "NEW ARRIVALS"
+    },
+    {
+      "id": "shopify-section-template--22903329161502__custom_liquid_eVfYiH",
+      "box": {
+        "x": 0,
+        "y": 2156.890625,
+        "width": 1440,
+        "height": 705,
+        "top": 2156.890625,
+        "right": 1440,
+        "bottom": 2861.890625,
+        "left": 0
+      },
+      "text": "GIFTING COMBOS"
+    },
+    {
+      "id": "shopify-section-template--22903329161502__176033500135aa224d",
+      "box": {
+        "x": 0,
+        "y": 2861.890625,
+        "width": 1440,
+        "height": 2940,
+        "top": 2861.890625,
+        "right": 1440,
+        "bottom": 5801.890625,
+        "left": 0
+      },
+      "text": "Hear It From Our Happy Clients\n4.70 ★ (319)\n Verified\n\nI recently received the cushion covers and th"
+    }
+  ],
+  "header": "",
+  "colors": [
+    {
+      "selector": "cart__empty-text",
+      "font": "24px / 31.2px Montserrat, sans-serif",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "selector": "drawer__heading",
+      "font": "24px / 31.2px Montserrat, sans-serif",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "selector": "totals__total",
+      "font": "16px / 16px Montserrat, sans-serif",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "selector": "announcement-bar",
+      "font": "16px / 28.8px Montserrat, sans-serif",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "selector": "header header--middle-left header--mobile-center page-width header--has-menu header--has-social header--has-account",
+      "font": "16px / 28.8px Montserrat, sans-serif",
+      "color": "rgba(16, 63, 90, 0.75)",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "selector": "rich-text__heading rte inline-richtext h2 scroll-trigger animate--slide-in",
+      "font": "24px / 31.2px Montserrat, sans-serif",
+      "color": "rgb(14, 27, 77)",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "selector": "slider-title",
+      "font": "600 33px / 42.9px Montserrat, sans-serif",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "selector": "title-head",
+      "font": "600 33px / 42.9px Montserrat, sans-serif",
+      "color": "rgb(14, 27, 77)",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "selector": "jdgm-title",
+      "font": "24px Montserrat, sans-serif",
+      "color": "rgb(14, 27, 77)",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "selector": "footer-block__heading inline-richtext",
+      "font": "18px / 23.4px Montserrat, sans-serif",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "selector": "footer-block__heading inline-richtext",
+      "font": "18px / 23.4px Montserrat, sans-serif",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "selector": "footer-block__heading inline-richtext",
+      "font": "18px / 23.4px Montserrat, sans-serif",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "selector": "footer-block__heading inline-richtext",
+      "font": "18px / 23.4px Montserrat, sans-serif",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "selector": "footer-block__heading inline-richtext",
+      "font": "18px / 23.4px Montserrat, sans-serif",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)"
+    }
+  ]
+}

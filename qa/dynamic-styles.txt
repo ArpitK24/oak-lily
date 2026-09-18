@@ -1,0 +1,172 @@
+{
+  links: [
+    'https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css',
+    'https://oakandlily.in/cdn/shop/t/2/assets/progressive-offer-bar.css?v=178534584535599360571777907163',
+    'https://oakandlily.in/cdn/shop/t/2/assets/base.css?v=24339170957881386771774900946',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-predictive-search.css?v=118923337488134913561720886133',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/layout-DoosNJCm.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/Text-CQZ7f97l.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/Center-DuedLykc.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/JLightbox-CDm52qls.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/JmModal-CkjWUkR6.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/JLightboxCarousel-JFH3vNVM.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/JLightboxContent-CXehstry.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/ReviewItem-BPBDRgPh.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/Cluster-CiawKNFa.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/Stack-DHDZjISx.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/Box-DtEw4VQg.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/Icon-Dm_usQ00.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/StarRating-CcPYmFC3.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/ReviewContent-DsM2TOnH.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/Frame-B8MXG7Dz.css',
+    'https://cdn.shopify.com/extensions/01a0aec3-d091-7f81-97d7-b06e50474750/judgeme-754/assets/Button-Bfno6Nex.css',
+    'https://oakandlily.in/cdn/shop/t/2/assets/quantity-popover.css?v=78745769908715669131720886133',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-card.css?v=120341546515895839841774679196',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-slideshow.css?v=170654395204511176521720886133',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-slider.css?v=14039311878856620671720886133',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-list-social.css?v=35792976012981934991720886132',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-list-menu.css?v=151968516119678728991720886132',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-search.css?v=165164710990765432851720886133',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-menu-drawer.css?v=110695408305392539491720886132',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-cart-notification.css?v=54116361853792938221720886132',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-cart-items.css?v=127384614032664249911720886132',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-price.css?v=70172745017360139101720886133',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-cart-drawer.css?v=19530961819213608911720886132',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-cart.css?v=165982380921400067651720886132',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-totals.css?v=15906652033866631521720886133',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-price.css?v=70172745017360139101720886133',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-discounts.css?v=152760482443307489271720886132',
+    'https://oakandlily.in/cdn/shop/t/2/assets/section-rich-text.css?v=155250126305810049721720886134',
+    'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css',
+    'https://oakandlily.in/cdn/shop/t/2/assets/section-footer.css?v=61390616271034004541720886133',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-newsletter.css?v=4727253280200485261720886133',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-list-menu.css?v=151968516119678728991720886132',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-list-payment.css?v=69253961410771838501720886132',
+    'https://oakandlily.in/cdn/shop/t/2/assets/component-list-social.css?v=35792976012981934991720886132'
+  ],
+  fonts: [
+    '\n' +
+      '      @font-face {\n' +
+      '  font-family: Montserrat;\n' +
+      '  font-weight: 400;\n' +
+      '  font-style: normal;\n' +
+      '  font-display: swap;\n' +
+      '  src: url("//oakandlily.in/cdn/fonts/montserrat/montserrat_n4.81949fa0ac9fd2021e16436151e8eaa539321637.woff2") format("woff2"),\n' +
+      '       url("//oakandlily.in/cdn/fonts/montserrat/montserrat_n4.a6c632ca7b62da89c3594789ba828388aac693fe.woff") format("woff");\n' +
+      '}\n' +
+      '\n' +
+      '      @font-face {\n' +
+      '  font-family: Montserrat;\n' +
+      '  font-weight: 700;\n' +
+      '  font-style: normal;\n' +
+      '  font-display: swap;\n' +
+      '  src: url("//oakandlily.in/cdn/fonts/montserrat/montserrat_n7.3c434e22befd5c18a6b4afadb1e3d77c128c7939.woff2") format("woff2"),\n' +
+      '       url("//oakandlily.in/cdn/fonts/montserrat/montserrat_n7.5d9fa6e2cae713c8fb539a9876489d86207fe957.woff") format("woff");\n' +
+      '}\n' +
+      '\n' +
+      '      @font-face {\n' +
+      '  font-family: Montserrat;\n' +
+      '  font-weight: 400;\n' +
+      '  font-style: italic;\n' +
+      '  font-display: swap;\n' +
+      '  src: url("//oakandlily.in/cdn/fonts/montserrat/montserrat_i4.5a4ea298b4789e064f62a29aafc18d41f09ae59b.woff2") format("woff2"),\n' +
+      '       url("//oakandlily.in/cdn/fonts/montserrat/montserrat_i4.072b5869c5e0ed5b9d2021e4c2af132e16681ad2.woff") format("woff");\n' +
+      '}\n' +
+      '\n' +
+      '      @font-face {\n' +
+      '  font-family: Montserrat;\n' +
+      '  font-weight: 700;\n' +
+      '  font-style: italic;\n' +
+      '  font-display: swap;\n' +
+      '  src: url("//oakandlily.in/cdn/fonts/montserrat/montserrat_i7.a0d4a463df4f146567d871890ffb3c80408e7732.woff2") format("woff2"),\n' +
+      '       url("//oakandlily.in/cdn/fonts/montserrat/montserrat_i7.f6ec9f2a0681acc6f8152c40921d2a4d2e1a2c78.woff") format("woff");\n' +
+      '}\n' +
+      '\n' +
+      '      @font-face {\n' +
+      '  fo',
+    '\n' +
+      `  @-webkit-keyframes jdgm-spin{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);-ms-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes jdgm-spin{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);-ms-transform:rotate(359deg);transform:rotate(359deg)}}@font-face{font-family:'JudgemeStar';src:url("data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAScAA0AAAAABrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAEgAAAABoAAAAcbyQ+3kdERUYAAARgAAAAHgAAACAAMwAGT1MvMgAAAZgAAABGAAAAVi+vS9xjbWFwAAAB8AAAAEAAAAFKwBMjvmdhc3AAAARYAAAACAAAAAj//wADZ2x5ZgAAAkAAAAEJAAABdH33LXtoZWFkAAABMAAAAC0AAAA2BroQKWhoZWEAAAFgAAAAHAAAACQD5QHQaG10eAAAAeAAAAAPAAAAFAYAAABsb2NhAAACMAAAAA4AAAAOAO4AeG1heHAAAAF8AAAAHAAAACAASgAvbmFtZQAAA0wAAADeAAABkorWfVZwb3N0AAAELAAAACkAAABEp3ubLXgBY2BkYADhPPP4OfH8Nl8ZuJkYQODS2fRrCPr/aSYGxq1ALgcDWBoAO60LkwAAAHgBY2BkYGDc+v80gx4TAwgASaAICmABAFB+Arl4AWNgZGBgYGPQYWBiAAIwyQgWc2AAAwAHVQB6eAFjYGRiYJzAwMrAwejDmMbAwOAOpb8ySDK0MDAwMbByMsCBAAMCBKS5pjA4PGB4wMR44P8BBj3GrQymQGFGkBwAjtgK/gAAeAFjYoAAEA1jAwAAZAAHAHgB3crBCcAwDEPRZydkih567CDdf4ZskmLwFBV8xBfCaC4BXkOUmx4sU0h2ngNb9V0vQCxaRKIAevT7fGWuBrEAAAAAAAAAAAA0AHgAugAAeAF9z79Kw1AUx/FzTm7un6QmJtwmQ5Bg1abgEGr/BAqlU6Gju+Cgg1MkQ/sA7Vj7BOnmO/gUvo2Lo14NqIO6/IazfD8HEODtmQCfoANwNsyp2/GJt3WKQrd1NLiYYWx2PBqOsmJMEOznPOTzfSCrhAtbbLdmeFLJV9eKd63WLrZcIcuaEVdssWCKM6pLCfTVOYbz/0pNSMSZKLIZpvh78sAUH6PlMrreTCabP`,
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-Regular.woff2') format('woff2');          font-weight: 400;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-Medium.ttf') format('woff2');          font-weight: 500;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-SemiBold.woff2') format('woff2');          font-weight: 600;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-Regular.woff2') format('woff2');          font-weight: 400;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-Medium.ttf') format('woff2');          font-weight: 500;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-SemiBold.woff2') format('woff2');          font-weight: 600;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-Regular.woff2') format('woff2');          font-weight: 400;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-Medium.ttf') format('woff2');          font-weight: 500;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-SemiBold.woff2') format('woff2');          font-weight: 600;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-Regular.woff2') format('woff2');          font-weight: 400;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-Medium.ttf') format('woff2');          font-weight: 500;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-SemiBold.woff2') format('woff2');          font-weight: 600;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-Regular.woff2') format('woff2');          font-weight: 400;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-Medium.ttf') format('woff2');          font-weight: 500;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-SemiBold.woff2') format('woff2');          font-weight: 600;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-Regular.woff2') format('woff2');          font-weight: 400;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-Medium.ttf') format('woff2');          font-weight: 500;          font-display: swap;        }      ",
+    "      @font-face {          font-family: Euclid Circular A;          src: url('https://sdk.breeze.in/gallery/fonts/EuclidCircularA-SemiBold.woff2') format('woff2');          font-weight: 600;          font-display: swap;        }      "
+  ],
+  icons: '\n' +
+    '      <div class="desktop-localization-wrapper">\n' +
+    '</div>\n' +
+    '      \n' +
+    '\n' +
+    '<details-modal class="header__search">\n' +
+    '  <details>\n' +
+    '    <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="Search" role="button">\n' +
+    '      <span>\n' +
+    '        <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">\n' +
+    '          <use href="#icon-search">\n' +
+    '        </use></svg>\n' +
+    '        <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false">\n' +
+    '          <use href="#icon-close">\n' +
+    '        </use></svg>\n' +
+    '      </span>\n' +
+    '    </summary>\n' +
+    '    <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="Search">\n' +
+    '      <div class="modal-overlay"></div>\n' +
+    '      <div class="search-modal__content search-modal__content-bottom" tabindex="-1"><predictive-search class="search-modal__form" data-loading-text="Loading..."><form action="/search" method="get" role="search" class="search search-modal__form">\n' +
+    '          <div class="field">\n' +
+    '            <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" role="combobox" aria-expanded="false" aria-owns="predictive-search-results" aria-controls="predictive-search-results" aria-haspopup="listbox" aria-autocomplete="list" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false">\n' +
+    '            <label class="field__label" for="Search-In-Modal">Search</label>\n' +
+    '            <input type="hidden" name="options[prefix]" value="last">\n' +
+    '            <button type="reset" class="reset__button field__button hidden" aria-label="Clear search term">\n' +
+    '              <svg class="icon icon-close" aria-hidden="true" focusable="false">\n' +
+    '                <use xlink:href="#icon-reset">\n' +
+    '              </use></svg>\n' +
+    '            </button>\n' +
+    '            <button class="search__button field__button" aria-label="Search">\n' +
+    '              <svg class="icon icon-search" aria-hidden="true" focusable="false">\n' +
+    '                <use href="#icon-search">\n' +
+    '              </use></svg>\n' +
+    '            </button>\n' +
+    '          </div><div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search="">\n' +
+    '\n' +
+    '<div class="predictive-search__loading-state">\n' +
+    '  <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">\n' +
+    '    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>\n' +
+    '  </svg>\n' +
+    '</div>\n' +
+    '</div>\n' +
+    '\n' +
+    '            <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span></form></predictive-search><button type="button" class="search-modal__close-button modal__close-button link link--text focus-inset" aria-label="Close">\n' +
+    '          <svg class="icon icon-close" aria-hidden="true" focusable="false">\n' +
+    '            <use href="#icon-close">\n' +
+    '          </use></svg>\n' +
+    '        </button>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </details>\n' +
+    '</details-modal>\n' +
+    '\n' +
+    '<a href="https://oakandlily.in/customer_authentication/redirect?locale=en&amp;region_country=IN" class="header__icon header__icon--account link focus-inset small-hide kwikpass-loading"><account-icon><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-account" fill="none" viewBox="0 0 18 19">\n' +
+    '  <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor">\n' +
+    '</path></svg>\n' +
+    '\n' +
+    '</account-icon><span class="visually-hidden">Log in</span>\n' +
+    '        </a><a href="/cart" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble" role="button" aria-haspopup="dialog"><svg class="icon icon-cart-empty" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">\n' +
+    '  <path d="m15.75 11.8h-3.16l-.77 11.6a5 5 0 0 0 4.99 5.34h7.38a5 5 0 0 0 4.99-5.33l-.78-11.61zm0 1h-2.22l-.71 10.67a4 4 0 0 0 3.99 4.27h7.38a4 4 0 0 0 4-4.27l-.72-10.67h-2.22v.63a4.75 4.75 0 1 1 -9.5 0zm8.5 0h-7.5v.63a3.75 3.75 0 1 0 7.5 0z" fill="currentColor" fill-rule="evenodd"></path>\n' +
+    '</svg>\n' +
+    '<span class="visually-hidden">Cart</span></a>\n' +
+    '    '
+}

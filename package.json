@@ -1,0 +1,21 @@
+{
+  "name": "oak-and-lily",
+  "version": "1.0.0",
+  "description": "Faithful local replica of the Oak & Lily storefront",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "build": "node scripts/validate.mjs",
+    "test": "node scripts/test.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  }
+}
