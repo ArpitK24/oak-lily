@@ -5,7 +5,7 @@
       "width": 390,
       "height": 391,
       "changedChannels": 1170,
-      "meanDifference": 0.00639386189258312,
+      "meanDifference": 0.026214833759590793,
       "sameSize": true
     },
     "headerHeight": 92.265625,
@@ -43,7 +43,7 @@
       "width": 768,
       "height": 258,
       "changedChannels": 2304,
-      "meanDifference": 0.009689922480620155,
+      "meanDifference": 0.03972868217054264,
       "sameSize": true
     },
     "headerHeight": 73,
@@ -81,7 +81,7 @@
       "width": 1440,
       "height": 484,
       "changedChannels": 4320,
-      "meanDifference": 0.005165289256198347,
+      "meanDifference": 0.021177685950413222,
       "sameSize": true
     },
     "headerHeight": 96.375,

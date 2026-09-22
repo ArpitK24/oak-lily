@@ -77,38 +77,213 @@
 }
 
 /* --------------------------------------------------------------------------
-   Page Header / Eyebrow
+   Hero Card & Bundel-redesign.png Tier Header
    -------------------------------------------------------------------------- */
+.oak-bundle .oak-bundle-hero-card {
+  background: #fbf9f5;
+  border: 1px solid #eee7dc;
+  border-radius: 14px;
+  padding: 34px 28px 30px;
+  margin: 0 auto 38px;
+  box-shadow: 0 4px 18px rgba(14, 27, 77, 0.03);
+  text-align: center;
+}
+
 .oak-bundle .oak-bundle-heading {
   text-align: center;
-  margin: 0 auto 40px;
-  max-width: 640px;
+  margin: 0 auto 24px;
+  max-width: 680px;
 }
 
 .oak-bundle .oak-bundle-eyebrow {
   display: block;
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--bundle-gold);
+  color: #b89758;
   margin-bottom: 8px;
 }
 
-.oak-bundle .oak-bundle-heading h1 {
+.oak-bundle .oak-bundle-title {
   margin: 0 0 10px;
-  font-size: 32px;
+  font-family: var(--font-heading-family, "Playfair Display", "Cormorant Garamond", Georgia, serif);
+  font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
   line-height: 1.25;
   color: var(--bundle-ink);
 }
 
-.oak-bundle .oak-bundle-heading p {
+.oak-bundle .oak-bundle-subtitle {
   margin: 0 auto;
   font-size: 14.5px;
   line-height: 1.6;
   color: var(--bundle-text-muted);
+  max-width: 600px;
+}
+
+/* Header Tier Bar */
+.oak-bundle .oak-bundle-header-tier-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 820px;
+  margin: 0 auto;
+  padding-top: 6px;
+}
+
+.oak-bundle .oak-bundle-tier-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #f4eee3;
+  border: 1.5px solid #dcd1be;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #a4813f;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.oak-bundle .oak-bundle-tier-badge:hover {
+  transform: scale(1.05);
+  border-color: #c59b27;
+}
+
+.oak-bundle .oak-bundle-box-svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Tier Columns */
+.oak-bundle .oak-bundle-header-tier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 105px;
+  padding: 4px 6px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.oak-bundle .oak-bundle-header-tier-kicker {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7b746c;
+  margin-bottom: 2px;
+}
+
+.oak-bundle .oak-bundle-header-tier-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--bundle-ink);
+  line-height: 1.2;
+  margin-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.oak-bundle .oak-bundle-header-tier-state {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7b746c;
+  line-height: 1.3;
+  transition: all 0.2s ease;
+}
+
+.oak-bundle .oak-bundle-header-tier.is-unlocked .oak-bundle-header-tier-state {
+  color: #1e6b37;
+  font-weight: 600;
+}
+
+.oak-bundle .oak-bundle-header-tier.is-active .oak-bundle-header-tier-state {
+  color: #b89758;
+  font-weight: 600;
+}
+
+/* Center Connector Track */
+.oak-bundle .oak-bundle-header-connector {
+  flex: 1 1 200px;
+  max-width: 260px;
+  min-width: 120px;
+  padding: 0 8px;
+}
+
+.oak-bundle .oak-bundle-header-track {
+  position: relative;
+  width: 100%;
+  --header-progress: 0%;
+}
+
+.oak-bundle .oak-bundle-header-track-line {
+  position: relative;
+  height: 3px;
+  background: #dfd7c7;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.oak-bundle .oak-bundle-header-track-fill {
+  display: block;
+  height: 100%;
+  width: var(--header-progress, 0%);
+  background: linear-gradient(90deg, #c59b27, #0e1b4d);
+  border-radius: 3px;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.oak-bundle .oak-bundle-header-milestones {
+  position: relative;
+  width: 100%;
+  margin-top: -8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.oak-bundle .oak-bundle-header-milestone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  margin: 0 -24px;
+}
+
+.oak-bundle .oak-bundle-header-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fbf9f5;
+  border: 2.5px solid #c59b27;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+.oak-bundle .oak-bundle-header-milestone.is-unlocked .oak-bundle-header-dot {
+  background: #0e1b4d;
+  border-color: #0e1b4d;
+  box-shadow: 0 0 0 3px rgba(197, 155, 39, 0.25);
+}
+
+.oak-bundle .oak-bundle-header-milestone-label {
+  margin-top: 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #6a6257;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.oak-bundle .oak-bundle-header-milestone.is-unlocked .oak-bundle-header-milestone-label {
+  color: #0e1b4d;
+  font-weight: 700;
 }
 
 /* --------------------------------------------------------------------------
@@ -119,6 +294,52 @@
   grid-template-columns: minmax(0, 1fr) 400px;
   gap: 36px;
   align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   Desktop-Only Summary Visibility & Transitions
+   0 selected items: Hide summary panel completely and expand product grid
+   1+ items: Reveal panel with subtle, premium entrance animation
+   -------------------------------------------------------------------------- */
+@media (min-width: 750px) {
+  .oak-bundle:not(.has-selected-items) .oak-bundle-layout {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .oak-bundle:not(.has-selected-items) .oak-bundle-summary {
+    display: none !important;
+  }
+
+  .oak-bundle:not(.has-selected-items) .oak-bundle-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .oak-bundle.has-selected-items .oak-bundle-summary {
+    animation: oakBundlePanelReveal 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1199px) {
+  .oak-bundle:not(.has-selected-items) .oak-bundle-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 750px) and (max-width: 860px) {
+  .oak-bundle:not(.has-selected-items) .oak-bundle-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@keyframes oakBundlePanelReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .oak-bundle .oak-bundle-shopping {
@@ -869,6 +1090,32 @@
   .oak-bundle {
     padding: 24px 20px 48px;
   }
+  .oak-bundle .oak-bundle-hero-card {
+    padding: 28px 20px 24px;
+    margin-bottom: 30px;
+  }
+  .oak-bundle .oak-bundle-header-tier-bar {
+    gap: 12px;
+  }
+  .oak-bundle .oak-bundle-tier-badge {
+    width: 44px;
+    height: 44px;
+  }
+  .oak-bundle .oak-bundle-box-svg {
+    width: 20px;
+    height: 20px;
+  }
+  .oak-bundle .oak-bundle-header-tier {
+    min-width: 95px;
+  }
+  .oak-bundle .oak-bundle-header-tier-title {
+    font-size: 19px;
+  }
+  .oak-bundle .oak-bundle-header-connector {
+    max-width: 180px;
+    min-width: 90px;
+    padding: 0 4px;
+  }
   .oak-bundle .oak-bundle-layout {
     grid-template-columns: minmax(0, 1fr) 310px;
     gap: 16px;
@@ -920,17 +1167,94 @@
   .oak-bundle {
     padding: 20px 16px 24px;
   }
-  .oak-bundle .oak-bundle-heading {
-    margin-bottom: 24px;
+  .oak-bundle .oak-bundle-hero-card {
+    padding: 22px 12px 18px;
+    border-radius: 12px;
+    margin-bottom: 22px;
   }
-  .oak-bundle .oak-bundle-heading h1 {
-    font-size: 24px;
+  .oak-bundle .oak-bundle-heading {
+    margin-bottom: 16px;
+  }
+  .oak-bundle .oak-bundle-title {
+    font-size: clamp(22px, 5.5vw, 28px);
     margin-bottom: 6px;
   }
-  .oak-bundle .oak-bundle-heading p {
+  .oak-bundle .oak-bundle-subtitle {
     font-size: 13px;
     max-width: 320px;
-    line-height: 1.55;
+    line-height: 1.5;
+  }
+  .oak-bundle .oak-bundle-header-tier-bar {
+    gap: 6px;
+    justify-content: space-between;
+    padding-top: 0;
+  }
+  .oak-bundle .oak-bundle-tier-badge {
+    width: 38px;
+    height: 38px;
+  }
+  .oak-bundle .oak-bundle-box-svg {
+    width: 17px;
+    height: 17px;
+  }
+  .oak-bundle .oak-bundle-header-tier {
+    min-width: 76px;
+    padding: 2px 2px;
+  }
+  .oak-bundle .oak-bundle-header-tier-kicker {
+    font-size: 9.5px;
+    margin-bottom: 1px;
+  }
+  .oak-bundle .oak-bundle-header-tier-title {
+    font-size: 16px;
+    margin-bottom: 1px;
+  }
+  .oak-bundle .oak-bundle-header-tier-state {
+    font-size: 10px;
+  }
+  .oak-bundle .oak-bundle-header-connector {
+    flex: 1 1 80px;
+    min-width: 70px;
+    max-width: 140px;
+    padding: 0 2px;
+  }
+  .oak-bundle .oak-bundle-header-milestones {
+    margin-top: -6px;
+  }
+  .oak-bundle .oak-bundle-header-milestone {
+    width: 50px;
+    margin: 0 -16px;
+  }
+  .oak-bundle .oak-bundle-header-dot {
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+  }
+  .oak-bundle .oak-bundle-header-milestone-label {
+    margin-top: 6px;
+    font-size: 9.5px;
+  }
+  @media (max-width: 540px) {
+    .oak-bundle .oak-bundle-tier-badge {
+      display: none;
+    }
+    .oak-bundle .oak-bundle-header-tier-bar {
+      gap: 12px;
+      justify-content: center;
+    }
+    .oak-bundle .oak-bundle-header-tier {
+      min-width: 82px;
+    }
+    .oak-bundle .oak-bundle-header-connector {
+      flex: 1 1 120px;
+      min-width: 110px;
+      max-width: 180px;
+      padding: 0 4px;
+    }
+    .oak-bundle .oak-bundle-header-milestone {
+      width: 56px;
+      margin: 0 -18px;
+    }
   }
   .oak-bundle .oak-bundle-layout {
     display: flex;

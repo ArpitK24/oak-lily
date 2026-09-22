@@ -74,6 +74,7 @@
     // Presentation only: the existing count and rate drive every progress indicator.
     root.querySelector('[data-unit-count]').textContent = `${units} ${units === 1 ? 'item' : 'items'}`;
     root.querySelector('[data-empty]').hidden = units > 0;
+    root.classList.toggle('has-selected-items', units > 0);
     root.querySelector('[data-discount-rate]').textContent = rate ? `(${rate}%)` : '';
     root.querySelector('[data-mobile-count]').textContent = `YOUR BUNDLE · ${units} ${units === 1 ? 'ITEM' : 'ITEMS'}`;
     root.querySelector('[data-mobile-tier]').textContent = rate ? `${rate}% OFF · ${money(subtotal - discount)}` :
@@ -96,6 +97,42 @@
     progress.style.setProperty('--tier-progress', units >= 3 ? '100%' : '0%');
     root.querySelector('.oak-bundle-marker-two').classList.toggle('is-unlocked', units >= 2);
     root.querySelector('.oak-bundle-marker-three').classList.toggle('is-unlocked', units >= 3);
+
+    const headerTier2 = root.querySelector('[data-header-tier="2"]');
+    const headerTier3 = root.querySelector('[data-header-tier="3"]');
+    const headerState2 = root.querySelector('[data-header-state="2"]');
+    const headerState3 = root.querySelector('[data-header-state="3"]');
+    const headerProgress = root.querySelector('[data-header-progress]');
+    const headerMilestone2 = root.querySelector('[data-milestone-dot="2"]');
+    const headerMilestone3 = root.querySelector('[data-milestone-dot="3"]');
+
+    if (headerTier2 && headerState2) {
+      const unlocked2 = units >= 2;
+      const active2 = units === 2;
+      headerTier2.classList.toggle('is-unlocked', unlocked2);
+      headerTier2.classList.toggle('is-active', active2);
+      headerState2.textContent = active2 ? 'Active tier' : unlocked2 ? 'Unlocked' :
+        units === 1 ? 'Add 1 more item' : 'Add 2 items';
+    }
+
+    if (headerTier3 && headerState3) {
+      const unlocked3 = units >= 3;
+      const active3 = units >= 3;
+      headerTier3.classList.toggle('is-unlocked', unlocked3);
+      headerTier3.classList.toggle('is-active', active3);
+      headerState3.textContent = active3 ? 'Active tier' :
+        units === 2 ? 'Add 1 more item' :
+        units === 1 ? 'Add 2 items' : 'Add 3 items';
+    }
+
+    if (headerProgress) {
+      const fillPct = units >= 3 ? 100 : units === 2 ? 50 : units === 1 ? 25 : 0;
+      headerProgress.style.setProperty('--header-progress', `${fillPct}%`);
+      headerProgress.setAttribute('aria-valuenow', Math.min(units, 3));
+      if (headerMilestone2) headerMilestone2.classList.toggle('is-unlocked', units >= 2);
+      if (headerMilestone3) headerMilestone3.classList.toggle('is-unlocked', units >= 3);
+    }
+
     checkout.disabled = busy || units < 2;
 
     cards.forEach(card => {
