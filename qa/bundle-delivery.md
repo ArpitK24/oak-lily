@@ -38,13 +38,13 @@ Passed at **390px, 768px and 1440px**:
 
 The existing `scripts/test.mjs` regression suite also passed (search, product navigation, variants, cart addition/quantity/removal/persistence, and mobile menu navigation).
 
-Screenshots were reviewed for all three widths. A controlled Spring Sales hero comparison with bundle additions removed from the DOM passed at all widths. Images retained identical dimensions; mean per-channel differences were below 0.01 on the 0–255 scale (a boundary row). This is a controlled comparison, not a historical Git baseline.
+Screenshots were reviewed for all three widths. A controlled Spring Sales hero comparison with bundle additions removed from the DOM passed at all widths. Images retained identical dimensions; mean per-channel differences were below 0.04 on the 0–255 scale (a boundary row). This is a controlled comparison, not a historical Git baseline.
 
 ## Scope and limitations
 
 `replica.css`, captured CSS assets, `server.mjs`, the hero and existing page content were not intentionally changed. Captured HTML files received only the necessary navigation link; the homepage also received the banner. Shopify-only work from the initial approach was removed.
 
-The directory has no `.git`, so Git diff review was unavailable. See `bundle-changed-files.txt` for the recorded changed-file list.
+The implementation is recorded in Git commits `df92a46` and `4dccc8e`. See `bundle-changed-files.txt` for the feature file inventory. The final continuation also restores the missing `scripts/validate.mjs` used by `npm run build`.
 
 This remains a local functional replica. Catalog inventory is captured data, and checkout retains the existing non-payment behavior. No external service is required for bundles.
 

@@ -162,4 +162,5 @@ public/search/index.html
 
 QA artifacts: qa/bundle-*.json, qa/bundle-*.png, qa/hero-before-*.png, qa/hero-after-*.png
 
-No .git directory is present; a Git diff was unavailable. This list records edits made during this task.
+Implementation history: df92a46 and 4dccc8e. This list records the feature file inventory.
+Final continuation: scripts/validate.mjs, qa/bundle-delivery.md, qa/bundle-changed-files.txt, and regenerated browser QA artifacts.
