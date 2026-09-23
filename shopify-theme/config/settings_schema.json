@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Theme settings",
+    "settings": [
+      {
+        "type": "color",
+        "id": "brand_navy",
+        "label": "Brand navy",
+        "default": "#103f5a"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+      {
+        "type": "link_list",
+        "id": "main_menu",
+        "label": "Main menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_menu",
+        "label": "Footer menu",
+        "default": "footer"
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero"
+    },
+    "featured": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Build Your Own Bundle",
+        "text": "Pick your favourite Oak & Lily products and save more when you bundle.",
+        "limit": 8
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "featured"
+  ]
+}

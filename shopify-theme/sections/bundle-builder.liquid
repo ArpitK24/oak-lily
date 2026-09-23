@@ -1,0 +1,100 @@
+{% liquid
+  assign kitchen = section.settings.kitchen_collection
+  assign table = section.settings.table_collection
+  assign bed = section.settings.bed_collection
+  assign living = section.settings.living_collection
+%}
+
+<section class="oak-section oak-bundle">
+  <div class="page-width">
+    <div class="oak-section__header">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.text }}</p>
+    </div>
+
+    <div class="oak-bundle__filters">
+      <button class="oak-bundle__filter is-active" type="button" data-bundle-filter="all">All</button>
+      <button class="oak-bundle__filter" type="button" data-bundle-filter="kitchen">Kitchen Combos</button>
+      <button class="oak-bundle__filter" type="button" data-bundle-filter="table">Table Combos</button>
+      <button class="oak-bundle__filter" type="button" data-bundle-filter="bed">Bed Combos</button>
+      <button class="oak-bundle__filter" type="button" data-bundle-filter="living">Living Room Combos</button>
+    </div>
+
+    <div class="oak-grid">
+      {% assign rendered_bundle_products = 0 %}
+      {% for product in kitchen.products limit: 8 %}
+        {% assign rendered_bundle_products = rendered_bundle_products | plus: 1 %}
+        <div data-bundle-card="kitchen">{% render 'product-card', product: product %}</div>
+      {% endfor %}
+      {% for product in table.products limit: 8 %}
+        {% assign rendered_bundle_products = rendered_bundle_products | plus: 1 %}
+        <div data-bundle-card="table">{% render 'product-card', product: product %}</div>
+      {% endfor %}
+      {% for product in bed.products limit: 8 %}
+        {% assign rendered_bundle_products = rendered_bundle_products | plus: 1 %}
+        <div data-bundle-card="bed">{% render 'product-card', product: product %}</div>
+      {% endfor %}
+      {% for product in living.products limit: 8 %}
+        {% assign rendered_bundle_products = rendered_bundle_products | plus: 1 %}
+        <div data-bundle-card="living">{% render 'product-card', product: product %}</div>
+      {% endfor %}
+      {% if rendered_bundle_products == 0 %}
+        {% for product in collections.all.products limit: 12 %}
+          {% assign rendered_bundle_products = rendered_bundle_products | plus: 1 %}
+          <div data-bundle-card="all">{% render 'product-card', product: product %}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+    {% if rendered_bundle_products == 0 %}
+      <div class="oak-empty-state">
+        <h3>No bundle products yet</h3>
+        <p>Add products to the selected bundle collections in Shopify Admin.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Bundle builder",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Build Your Own Bundle"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Pick your favourite Oak & Lily products and save more when you bundle."
+    },
+    {
+      "type": "collection",
+      "id": "kitchen_collection",
+      "label": "Kitchen collection"
+    },
+    {
+      "type": "collection",
+      "id": "table_collection",
+      "label": "Table collection"
+    },
+    {
+      "type": "collection",
+      "id": "bed_collection",
+      "label": "Bed collection"
+    },
+    {
+      "type": "collection",
+      "id": "living_collection",
+      "label": "Living room collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle builder"
+    }
+  ]
+}
+{% endschema %}

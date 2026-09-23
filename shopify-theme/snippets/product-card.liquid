@@ -1,0 +1,29 @@
+{% liquid
+  assign card_product = product
+  assign selected_variant = card_product.selected_or_first_available_variant
+%}
+
+<article class="oak-card">
+  <a href="{{ card_product.url }}" class="oak-card__image" aria-label="{{ card_product.title | escape }}">
+    {% if card_product.featured_image %}
+      {{ card_product.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', alt: card_product.title }}
+    {% else %}
+      {{ 'product-1' | placeholder_svg_tag }}
+    {% endif %}
+  </a>
+  <h3>
+    <a href="{{ card_product.url }}">{{ card_product.title }}</a>
+  </h3>
+  <div class="oak-price">
+    {% if selected_variant.compare_at_price > selected_variant.price %}
+      <s>{{ selected_variant.compare_at_price | money }}</s>
+    {% endif %}
+    <span>{{ selected_variant.price | money }}</span>
+  </div>
+  {% form 'product', card_product, class: 'oak-card__form' %}
+    <input type="hidden" name="id" value="{{ selected_variant.id }}">
+    <button class="oak-button oak-button--small oak-button--full" type="submit" {% unless selected_variant.available %}disabled{% endunless %}>
+      {% if selected_variant.available %}Add to cart{% else %}Sold out{% endif %}
+    </button>
+  {% endform %}
+</article>

@@ -1,0 +1,63 @@
+{% liquid
+  assign current_variant = product.selected_or_first_available_variant
+%}
+
+<section class="page-width">
+  <div class="oak-product">
+    <div class="oak-product__media">
+      {% for media in product.media %}
+        {% if media.media_type == 'image' %}
+          {{ media | image_url: width: 1200 | image_tag: loading: 'lazy', alt: product.title }}
+        {% endif %}
+      {% else %}
+        {{ product.featured_image | image_url: width: 1200 | image_tag: loading: 'eager', alt: product.title }}
+      {% endfor %}
+    </div>
+
+    <div class="oak-product__info">
+      <h1>{{ product.title }}</h1>
+      <div class="oak-price">
+        {% if current_variant.compare_at_price > current_variant.price %}
+          <s>{{ current_variant.compare_at_price | money }}</s>
+        {% endif %}
+        <span>{{ current_variant.price | money }}</span>
+      </div>
+
+      {% form 'product', product %}
+        {% if product.has_only_default_variant %}
+          <input type="hidden" name="id" value="{{ current_variant.id }}">
+        {% else %}
+          <div class="oak-field">
+            <label for="Variant-{{ section.id }}">Variant</label>
+            <select id="Variant-{{ section.id }}" name="id">
+              {% for variant in product.variants %}
+                <option value="{{ variant.id }}" {% if variant == current_variant %}selected{% endif %} {% unless variant.available %}disabled{% endunless %}>
+                  {{ variant.title }} - {{ variant.price | money }}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
+        {% endif %}
+
+        <div class="oak-field">
+          <label for="Quantity-{{ section.id }}">Quantity</label>
+          <input id="Quantity-{{ section.id }}" type="number" name="quantity" min="1" value="1">
+        </div>
+
+        <button class="oak-button" type="submit" {% unless current_variant.available %}disabled{% endunless %}>
+          {% if current_variant.available %}Add to cart{% else %}Sold out{% endif %}
+        </button>
+      {% endform %}
+
+      <div class="rte">
+        {{ product.description }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product"
+}
+{% endschema %}

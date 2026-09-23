@@ -111,7 +111,9 @@ const server = http.createServer(async (req, res) => {
 
     if (stat?.isDirectory()) file = path.join(file, 'index.html');
     if (!stat) {
-      if (requested === '/search') {
+      if (requested === '/admin/rewards' || requested === '/admin/rewards/') {
+        file = path.join(root, 'index.html');
+      } else if (requested === '/search') {
         file = path.join(root, 'search/index.html');
       } else {
         res.writeHead(404, { 'Content-Type': 'text/html' });

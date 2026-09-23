@@ -1,0 +1,51 @@
+<section class="oak-section">
+  <div class="page-width">
+    <div class="oak-section__header">
+      <h2>{{ collection.title }}</h2>
+      {% if collection.description != blank %}
+        <p>{{ collection.description | strip_html }}</p>
+      {% endif %}
+    </div>
+
+    {% paginate collection.products by section.settings.products_per_page %}
+      <div class="oak-grid">
+        {% for product in collection.products %}
+          {% render 'product-card', product: product %}
+        {% else %}
+          {% for product in collections.all.products limit: section.settings.products_per_page %}
+            {% render 'product-card', product: product %}
+          {% else %}
+            <div class="oak-empty-state oak-empty-state--wide">
+              <h3>No products found</h3>
+              <p>This collection does not have products yet. Add products in Shopify Admin or choose another collection.</p>
+              <a class="oak-button oak-button--outline" href="{{ routes.all_products_collection_url }}">View all products</a>
+            </div>
+          {% endfor %}
+        {% endfor %}
+      </div>
+
+      {% if paginate.pages > 1 %}
+        <nav class="oak-section__header" aria-label="Pagination">
+          {{ paginate | default_pagination }}
+        </nav>
+      {% endif %}
+    {% endpaginate %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "label": "Products per page",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "default": 24
+    }
+  ]
+}
+{% endschema %}

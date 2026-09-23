@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="{{ settings.brand_navy }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+    {{ content_for_header }}
+    {{ 'oak-theme.css' | asset_url | stylesheet_tag }}
+    <script>
+      window.oakTheme = {
+        moneyFormat: {{ shop.money_format | json }},
+        routes: {
+          cart: {{ routes.cart_url | json }},
+          cartAdd: {{ routes.cart_add_url | json }},
+          cartChange: {{ routes.cart_change_url | json }},
+          cartUpdate: {{ routes.cart_update_url | json }},
+          search: {{ routes.search_url | json }},
+          allProducts: {{ routes.all_products_collection_url | json }}
+        }
+      };
+    </script>
+    <script src="{{ 'oak-theme.js' | asset_url }}" defer></script>
+  </head>
+  <body class="template-{{ template.name }}">
+    <a class="skip-link" href="#MainContent">Skip to content</a>
+    {% sections 'header-group' %}
+    <main id="MainContent" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+    {% sections 'footer-group' %}
+
+    <div class="oak-cart-drawer" data-cart-drawer aria-hidden="true">
+      <button class="oak-cart-drawer__overlay" type="button" data-cart-close aria-label="Close cart"></button>
+      <aside class="oak-cart-drawer__panel" aria-label="Cart drawer">
+        <header class="oak-cart-drawer__header">
+          <span></span>
+          <h2>Your cart</h2>
+          <button class="oak-cart-drawer__close" type="button" data-cart-close aria-label="Close cart">&times;</button>
+        </header>
+        <div class="oak-cart-drawer__body" data-cart-drawer-body>
+          <p class="oak-muted">Loading cart...</p>
+        </div>
+        <footer class="oak-cart-drawer__footer" data-cart-drawer-footer hidden>
+          <div class="oak-cart-drawer__total">
+            <span>Estimated total</span>
+            <strong data-cart-drawer-total>{{ cart.total_price | money }}</strong>
+          </div>
+          <p>Taxes, discounts and shipping calculated at checkout.</p>
+          <a class="oak-button oak-button--full" href="{{ routes.cart_url }}">View cart</a>
+          <form action="{{ routes.cart_url }}" method="post">
+            <button class="oak-button oak-button--full" type="submit" name="checkout">Checkout</button>
+          </form>
+        </footer>
+      </aside>
+    </div>
+  </body>
+</html>

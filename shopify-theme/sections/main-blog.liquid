@@ -1,0 +1,32 @@
+<section class="oak-section">
+  <div class="page-width">
+    <div class="oak-section__header">
+      <h2>{{ blog.title }}</h2>
+    </div>
+
+    {% paginate blog.articles by 12 %}
+      <div class="oak-grid">
+        {% for article in blog.articles %}
+          <article class="oak-card">
+            <a class="oak-card__image" href="{{ article.url }}">
+              {% if article.image %}
+                {{ article.image | image_url: width: 700 | image_tag: loading: 'lazy', alt: article.title }}
+              {% endif %}
+            </a>
+            <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+            <p>{{ article.excerpt_or_content | strip_html | truncate: 120 }}</p>
+          </article>
+        {% endfor %}
+      </div>
+      {% if paginate.pages > 1 %}
+        {{ paginate | default_pagination }}
+      {% endif %}
+    {% endpaginate %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Blog"
+}
+{% endschema %}
