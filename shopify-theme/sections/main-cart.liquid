@@ -1,0 +1,58 @@
+<section class="oak-section">
+  <div class="page-width">
+    <div class="oak-section__header">
+      <h2>Your cart</h2>
+    </div>
+
+    {% if cart.item_count == 0 %}
+      <div class="oak-empty-state">
+        <h3>Your cart is empty</h3>
+        <p>Add a product to begin building your Oak & Lily order.</p>
+        <a class="oak-button" href="{{ routes.all_products_collection_url }}">Continue shopping</a>
+      </div>
+    {% else %}
+      <form class="oak-cart-page" action="{{ routes.cart_url }}" method="post">
+        <div class="oak-cart-page__items">
+          {% for item in cart.items %}
+            <article class="oak-cart-page__item">
+              <a class="oak-cart-page__image" href="{{ item.url }}">
+                {% if item.image %}
+                  {{ item.image | image_url: width: 240 | image_tag: loading: 'lazy', alt: item.product.title }}
+                {% endif %}
+              </a>
+              <div class="oak-cart-page__details">
+                <a href="{{ item.url }}"><strong>{{ item.product.title }}</strong></a>
+                {% unless item.variant.title == 'Default Title' %}
+                  <p>{{ item.variant.title }}</p>
+                {% endunless %}
+                <a class="oak-link" href="{{ item.url_to_remove }}">Remove</a>
+              </div>
+              <div class="oak-cart-page__quantity">
+                <label for="updates-{{ item.key | handle }}">Quantity</label>
+                <input id="updates-{{ item.key | handle }}" type="number" name="updates[]" value="{{ item.quantity }}" min="0" aria-label="Quantity for {{ item.product.title | escape }}">
+              </div>
+              <strong class="oak-cart-page__price">{{ item.final_line_price | money }}</strong>
+            </article>
+          {% endfor %}
+        </div>
+
+        <div class="oak-cart-page__summary">
+          <h3>Order summary</h3>
+          <div>
+            <span>Estimated total</span>
+            <strong>{{ cart.total_price | money }}</strong>
+          </div>
+          <p>Taxes, discounts and shipping calculated at checkout.</p>
+          <button class="oak-button oak-button--outline oak-button--full" type="submit" name="update">Update cart</button>
+          <button class="oak-button oak-button--full" type="submit" name="checkout">Checkout</button>
+        </div>
+      </form>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cart"
+}
+{% endschema %}

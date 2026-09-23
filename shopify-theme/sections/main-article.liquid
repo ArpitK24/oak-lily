@@ -1,0 +1,20 @@
+<article class="oak-section">
+  <div class="page-width">
+    <div class="oak-section__header">
+      <h2>{{ article.title }}</h2>
+      <p>{{ article.published_at | date: '%B %d, %Y' }}</p>
+    </div>
+    {% if article.image %}
+      {{ article.image | image_url: width: 1400 | image_tag: loading: 'eager', alt: article.title }}
+    {% endif %}
+    <div class="rte">
+      {{ article.content }}
+    </div>
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "Article"
+}
+{% endschema %}

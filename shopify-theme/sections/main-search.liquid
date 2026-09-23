@@ -1,0 +1,39 @@
+<section class="oak-section">
+  <div class="page-width">
+    <div class="oak-section__header">
+      <h2>Search</h2>
+      <form class="oak-search-form" action="{{ routes.search_url }}" method="get">
+        <input type="hidden" name="type" value="product">
+        <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search products" aria-label="Search products">
+        <button class="oak-button" type="submit">Search</button>
+      </form>
+    </div>
+
+    {% if search.performed %}
+      <div class="oak-grid">
+        {% for item in search.results %}
+          {% if item.object_type == 'product' %}
+            {% render 'product-card', product: item %}
+          {% endif %}
+        {% else %}
+          <div class="oak-empty-state oak-empty-state--wide">
+            <h3>No results found</h3>
+            <p>Try a different product name, fabric, room, or collection.</p>
+            <a class="oak-button oak-button--outline" href="{{ routes.all_products_collection_url }}">Browse catalog</a>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="oak-empty-state">
+        <h3>What are you looking for?</h3>
+        <p>Search by product, room, fabric, or style.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Search"
+}
+{% endschema %}

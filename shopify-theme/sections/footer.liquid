@@ -1,0 +1,39 @@
+<footer class="oak-footer">
+  <div class="oak-footer__grid page-width">
+    <div>
+      <h2>{{ shop.name }}</h2>
+      <p>{{ section.settings.tagline }}</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      {% for link in linklists[settings.main_menu].links limit: 6 %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
+    </div>
+    <div>
+      <h3>Good to know</h3>
+      {% for link in linklists[settings.footer_menu].links %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>{{ shop.email }}</p>
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}</p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "A home that feels like you."
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,59 @@
+<section class="oak-hero">
+  <div class="oak-hero__inner page-width">
+    <div class="oak-hero__media">
+      {% if section.settings.image %}
+        {{ section.settings.image | image_url: width: 1800 | image_tag: loading: 'eager', alt: section.settings.heading }}
+      {% else %}
+        <img src="{{ 'oak-hero.png' | asset_url }}" alt="{{ section.settings.heading | escape }}" loading="eager">
+      {% endif %}
+    </div>
+    <div class="oak-hero__content">
+      <h1>{{ section.settings.heading }}</h1>
+      <p>{{ section.settings.subheading }}</p>
+      {% if section.settings.button_label != blank %}
+        <a class="oak-button" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Spring Sales"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Our special discounts just for you!"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}
